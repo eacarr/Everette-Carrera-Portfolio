@@ -97,6 +97,7 @@ body {
   margin: 0;
   padding: 0;
   background: #e3d8c2;
+  text-transform: capitalize;
 }
 /* * {
   box-sizing: border-box;
@@ -109,11 +110,16 @@ ol {
   margin: 0;
   padding: 0;
 }
+li {
+  padding: 5px;
+}
 
 a {
   text-decoration: none;
   padding: 5px;
   color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -139,7 +145,7 @@ p {
 .content-wrapper {
   margin: auto;
   padding: 0 20px;
-  max-width: 1248px;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,26 +320,77 @@ td {
   padding-top: 50px;
   text-align: center;
 }
-.projects {
+.projects,
+.contact {
   margin: 50px 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .title {
-  margin: 5px 0 10px 0;
+  margin: 5px 0 25px 0;
 }
-.project a {
+.image-wrapper {
+  margin: 25px 0 25px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 15px 0;
 }
-img {
+.project img {
   width: 100%;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
 }
+.app-name {
+  margin: 20px;
+}
+.languages {
+  display: none;
+}
+.contact-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.first-name,
+.last-name {
+  width: 50%;
+}
+.contact-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.contact-inputs input {
+  border: #aba6a1 solid 1px;
+}
+.contact-inputs p {
+  margin: 10px;
+}
+.name p {
+  margin: 0;
+}
+#input-1,
+#input-2 {
+  width: 100%;
+  padding: 10px 0;
+}
+.first-name {
+  margin-right: 5px;
+}
+.email input,
+.subject input {
+  padding: 10px 0;
+  width: 100%;
+}
+.message textarea {
+  width: 100%;
+  height: 100px;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -430,7 +487,8 @@ img {
   .hero .content-wrapper {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 100px;
+    align-items: flex-start;
+    padding-top: 75px;
   }
   .intro {
     width: 50%;
@@ -453,9 +511,82 @@ img {
     max-height: 300px;
   }
   .about {
-    max-height: 300px;
-    padding: 0px 15px 0 15px;
-    overflow: visible;
+    width: 50%;
+    padding: 0;
+  }
+  .title {
+    font-size: 2em;
+    margin: 50px 0 50px 0;
+  }
+  .projects,
+  .contact {
+    margin-top: 100px;
+  }
+  .projects .content-wrapper {
+    background-color: gray;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: 100px 0 100px 0;
+  }
+
+  .project {
+    opacity: 1;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+  .project img {
+    height: 300px;
+  }
+  .app-name {
+    margin: 25px;
+  }
+  .languages {
+    display: block;
+    padding-bottom: 25px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s ease;
+    text-align: center;
+  }
+  .image-wrapper:hover .project {
+    opacity: 0.2;
+  }
+  .image-wrapper:hover .languages {
+    opacity: 1;
+  }
+  .languages p {
+    margin: 10px;
+    color: white;
+    text-shadow: #000;
+    font-weight: 600;
+  }
+  .languages p:first-child {
+    font-size: 1.3em;
+  }
+  .contact {
+  }
+  .contact .content-wrapper {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .photo {
+    justify-content: center;
+    width: 40%;
+  }
+
+  .contact-inputs {
+    width: 50%;
+    padding: 1.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -479,6 +610,9 @@ img {
   }
   p {
     font-size: 1.1em;
+  }
+  .projects .content-wrapper {
+    box-shadow: 25px 0 25px 0 #000;
   }
 }
 @media print,
