@@ -309,7 +309,7 @@ td {
   content: "";
   position: absolute;
   inset: 4px;
-  background-image: url("./img/pofile-edit.jpg");
+  background-image: url("../img/pofile-edit.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
