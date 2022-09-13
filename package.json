@@ -1,17 +1,29 @@
 {
-  "name": " ",
+  "name": "portfolio-2",
   "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
+  "description": "My Portfolio",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Everette Carrera",
   "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
+    "build": "parcel build main.html",
+    "dev": "parcel main.html --open",
     "start": "npm run build && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
-  }
+  },
+  "main": "main.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eacarr/Everette-Carrera-Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eacarr/Everette-Carrera-Portfolio/issues"
+  },
+  "homepage": "https://github.com/eacarr/Everette-Carrera-Portfolio#readme"
 }

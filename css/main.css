@@ -323,6 +323,9 @@ td {
   padding-top: 50px;
   text-align: center;
 }
+.about p {
+  line-height: 1.5rem;
+}
 .projects,
 .contact {
   margin: 50px 0 25px;
@@ -392,8 +395,54 @@ td {
 .message textarea {
   width: 100%;
   height: 100px;
+  margin-bottom: 10px;
 }
 
+.submit-btn {
+  align-items: center;
+  background-color: rgb(50, 136, 126);
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  width: 25%;
+  height: 40px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #16437e;
+  color: #ffffff;
+}
+
+.submit-btn:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.submit-btn:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
