@@ -268,31 +268,33 @@
           <div class="photo">
             <div class="img-wrapper"></div>
           </div>
-          <div class="contact-inputs">
-            <div class="contact-name">
-              <div class="first-name">
-                <p >First Name *</p>
-                <input id="input-1" type="text" />
+          <form action="https://formspree.io/f/mlevbble" method="POST">
+            <div class="contact-inputs">
+              <div class="contact-name">
+                <div class="first-name">
+                  <p >First Name *</p>
+                  <input id="input-1" type="text" name="text"/>
+                </div>
+                <div class="last-name">
+                  <p>Last Name *</p>
+                  <input id="input-2" type="text" name="text" />
+                </div>
               </div>
-              <div class="last-name">
-                <p>Last Name *</p>
-                <input id="input-2" type="text" />
+              <div class="email">
+                <p id="email">Email *</p>
+                <input type="email" name="email"/>
               </div>
+              <div class="subject">
+                <p id="subject">Subject *</p>
+                <input type="text" name="text"/>
+              </div>
+              <div class="message">
+                <p id="message">Message *</p>
+                <textarea type="text" name="text"></textarea>
+              </div>
+              <button class="submit-btn" type="submit" >Submit</button>
             </div>
-            <div class="email">
-              <p id="email">Email *</p>
-              <input for="email" />
-            </div>
-            <div class="subject">
-              <p id="subject">Subject *</p>
-              <input type="text" />
-            </div>
-            <div class="message">
-              <p id="message">Message *</p>
-              <textarea type="text"></textarea>
-            </div>
-            <button class="submit-btn" >Submit</button>
-          </div>
+          </form>
         </div>
       </section>
     </main>

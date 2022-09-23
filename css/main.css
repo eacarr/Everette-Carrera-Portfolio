@@ -644,9 +644,10 @@ td {
     justify-content: center;
     width: 40%;
   }
-
-  .contact-inputs {
+  form {
     width: 50%;
+  }
+  .contact-inputs {
     padding: 1.5rem;
   }
 }
