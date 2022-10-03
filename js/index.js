@@ -32,22 +32,45 @@ const displayBoard = (arr) => {
   });
 };
 
-const checkTableData = (char) => {
-  const tds = document.querySelectorAll("td");
-  tds.forEach((td) => {
-    // console.log(td);
-    if (td.innerHTML === char) {
-      td.classList.add("letter", "pulse");
-    }
-  });
-};
+////////////Add id's for padding///////////////
 
 const letterClasses = (e) => {
   e.forEach((char) => {
     if (/[a-zA-Z]/.test(char)) {
       checkTableData(char);
+      // console.log(char);
     }
   });
 };
 
-///////////////////////
+const checkTableData = (char) => {
+  const tds = document.querySelectorAll("td");
+  tds.forEach((td) => {
+    if (td.innerHTML === char) {
+      td.classList.add("letter", "pulse");
+      if (char === "'m") {
+        td.setAttribute("id", "m");
+      } else if (char === "I") {
+        td.setAttribute("id", "i");
+      }
+      // console.log(td);
+    }
+  });
+};
+
+///////////////clear form after submit/////////
+
+// const inputs = document.querySelectorAll("input");
+// const submit = document.querySelector("button");
+
+// submit.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   inputs.forEach((input) => (input.value = ""));
+//   document.querySelector("textarea").value = "";
+// });
+
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
+  }
+};
